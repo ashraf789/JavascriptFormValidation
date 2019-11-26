@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+</head>
+<body>
+	<div class="jumbotron text-center">
+		<h1>Bootstrap </h1>
+		<p>Form Validation Example!</p>
+	</div>
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<form method="post" onsubmit="return check_err()">
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="userId">USER ID</label>
+							<input class="form-control" type="text" id="userId" name="id_txt" placeholder="Ex. Ashraf789" required autofocus maxlength="15">
+							
+						</div>
+						<div class="form-group col-md-6">
+							<label for="user_name">USER NAME</label>
+							<input class="form-control" id="user_name" type="text" name="name_txt" placeholder="Ex. Mark Zuckerberg" required autofocus maxlength="50">
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="password_txt">PASSWORD</label>
+							<input class="form-control" type="password" name="password_txt" placeholder="********" id="password_txt" maxlength="20" required autofocus>
+							<div id="pswd_info" style="margin-top: 5px">
+								<h6>Password Requirements:</h6>
+								<ul>
+									<li id="letter" class="invalid">At least one small letter</li>
+									<li id="capital" class="invalid">At least one capital letter</li>
+									<li id="number" class="invalid">At least one number</li>
+									<li id="length" class="invalid">Must be 8-20 characters</li>
+								</ul>
+							</div>
+
+						</div>
+						<div class="form-group col-md-6">
+							<label for="re_enter_password">CONFIRM PASSWORD</label>
+							<input class="form-control" type="password" name="re_enter_password" id="re_enter_password" placeholder="********" required autofocus>
+						</div>                    
+					</div>
+					<div class="form-group">
+						<label for="mail_address">EMAIL</label>
+						<input class="form-control" type="text" id="mail_address" name="mail_address" required autofocus maxlength="50" placeholder="Mark@gmail.com">
+					</div> 
+
+					<div class="form-group">
+						<label for="department_sel">DEPARTMENT</label>
+						<select class="form-control" name="department_sel" id="department_sel">
+							<option value="cse">CSE</option>
+							<option value="cs">CS</option>
+							<option value="swe">SWE</option>
+							<option value="eee">EEE</option>
+							<option value="mct">MCT</option>
+							<option value="bba">BBA</option>
+						</select>
+					</div>
+					
+					<div class="form-group text-center" style="margin-top: 20px;">
+						<button type="submit" class="btn btn-secondary col-4 col-sm-4 col-md-2 ">SUBMIT</button>
+					</div>
+
+				</form>
+				
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Load All Js -->
+
+	<!-- CDN -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<!-- App Js -->
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
